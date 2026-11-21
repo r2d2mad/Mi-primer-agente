@@ -3,6 +3,8 @@ empresas = [
     ("Logistica Toledo", 45),
     ("Industrias del Centro", 320),
     ("Ferreteria Local", 3),
+    ("Sucentro ferre", 27),
+    ("Lafermu suministro", 150),
 ]
 
 for nombre, empleados in empresas:
@@ -15,3 +17,4 @@ for nombre, empleados in empresas:
     print(nombre, "->", empleados, "empleados -> prioridad", prioridad)
 
 print("Total de empresas revisadas:", len(empresas))
+
