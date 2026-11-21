@@ -1,5 +1,6 @@
 import json
 import anthropic
+import csv
 
 client = anthropic.Anthropic()
 
@@ -47,15 +48,16 @@ funciones = {
     "guardar_mensaje": guardar_mensaje,
 }
 
+with open("empresas.csv", encoding="utf-8") as f:
+    lista = [fila["nombre"] + " (" + fila["empleados"] + " empleados)" for fila in csv.DictReader(f)]
+
 tarea = (
     "Soy Arturo Cerro, comercial B2B de suministro industrial en Toledo y Madrid. "
     "Firma cada mensaje con mi nombre y no uses corchetes ni huecos como [Nombre] o [Empresa]. "
     "Para cada empresa de esta lista, "
     "calcula su prioridad, redacta un primer mensaje breve (máx. 50 palabras) adaptado "
-    "a esa prioridad y guárdalo. Empresas: Talleres Garcia (8 empleados), "
-    "Logistica Toledo (45), Industrias del Centro (320)."
+    "a esa prioridad y guárdalo. Empresas: " + ", ".join(lista) + "."
 )
-
 mensajes = [{"role": "user", "content": tarea}]
 
 while True:
