@@ -48,7 +48,9 @@ funciones = {
 }
 
 tarea = (
-    "Soy comercial B2B de suministro industrial. Para cada empresa de esta lista, "
+    "Soy Arturo Cerro, comercial B2B de suministro industrial en Toledo y Madrid. "
+    "Firma cada mensaje con mi nombre y no uses corchetes ni huecos como [Nombre] o [Empresa]. "
+    "Para cada empresa de esta lista, "
     "calcula su prioridad, redacta un primer mensaje breve (máx. 50 palabras) adaptado "
     "a esa prioridad y guárdalo. Empresas: Talleres Garcia (8 empleados), "
     "Logistica Toledo (45), Industrias del Centro (320)."
